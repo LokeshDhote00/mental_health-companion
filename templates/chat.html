@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+</head>
+<body >   
+  <div class="chat-box">
+    <div class="chat-header">
+      <span>Mental Health Companion</span>
+      <a href="/history"><button class="history-btn" type="button">History</button></a>
+    </div>
+
+    <div class="chat-messages">
+
+  <div class="message bot-message">Hi! I’m here to listen. 🌱</div>
+
+  {% for row in chat_history %}
+    <div class="message user-message">
+      {{ row.user_message }}
+    </div>
+
+    <div class="message bot-message" style="white-space: pre-line;">
+      {{ row.ai_reply }}
+    </div>
+  {% endfor %}
+
+</div>
+ -->
+
+    <!-- Chat form -->
+    <!-- <form class="chat-input" method="POST" action="/chat">
+      <input 
+        type="text" 
+        name="message" 
+        placeholder="Type your message..." 
+        required
+        autocomplete="off"
+  tabindex="-1"
+      />
+      <button type="submit">Send</button>
+    </form>
+
+  </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+</head>
+<body onload="window.scrollTo(0, document.body.scrollHeight)">
+
+<div class="chat-box">
+
+  <div class="chat-header">
+    <span>Mental Health Companion</span>
+    <a href="/history">
+      <button class="history-btn" type="button">History</button>
+    </a>
+    <a href="/logout">
+      <button class="history-btn" type="button">Logout</button>
+    </a>
+    
+  </div>
+
+  <!-- ✅ Auto Scroll Container Without JS -->
+  <div class="chat-messages">
+
+    <div class="message bot-message">Hi! I’m here to listen. 🌱</div>
+
+    {% for msg in messages %}
+      {% if msg.sender == "user" %}
+        <div class="message user-message">{{ msg.text }}</div>
+      {% else %}
+        <div class="message bot-message"  style="white-space: pre-line;">{{ msg.text }}</div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+
+  <form class="chat-input" method="POST" action="/chat">
+    <input type="text" name="message" placeholder="Type your message..." required />
+    <button type="submit">Send</button>
+  </form>
+
+</div>
+
+</body>
+</html>

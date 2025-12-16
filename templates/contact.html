@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/static/contact.css">
+ 
+</head>
+<body>
+
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <form method="POST" action="/submit_contact">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+        <h2>Our Contact Info</h2>
+        <p>Email: <a href="mailto:support@project.com">support@project.com</a></p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>Address: 123, College Road, City, State, India</p>
+    </div>
+</div>
+
+</body>
+</html>

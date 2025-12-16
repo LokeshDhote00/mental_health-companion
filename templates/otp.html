@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+<link rel="stylesheet" href="/static/otp.css">
+</head>
+<body>
+
+<div class="otp-box">
+    <h2>Enter OTP</h2>
+    <p>(OTP valid for 2 minutes)</p>
+
+    <form method="POST" action="/otp">
+        <input type="text" name="otp" maxlength="4" required placeholder="____">
+        <br>
+        <button type="submit">Verify OTP</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .otp-box {
+            background: white;
+            width: 350px;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .otp-box input {
+            width: 80%;
+            padding: 12px;
+            font-size: 18px;
+            letter-spacing: 5px;
+            text-align: center;
+            border: 2px solid #aaa;
+            border-radius: 6px;
+        }
+
+        .otp-box button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }

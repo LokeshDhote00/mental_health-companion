@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="static/history.css">
+</head>
+<body>
+
+<h1>A Fancy Table</h1>
+
+<table>
+  <tr>
+    <th>User Message</th>
+    <th>AI Reply</th>
+    <th>Date & Time</th>
+    <th>Delete</th>
+  </tr>
+
+  {% for row in history %}
+  <tr>
+    <td>{{ row.user_message }}</td>
+    <td>{{ row.ai_reply }}</td>
+    <td>{{ row.created_at }}</td>
+    <td>
+      <a href="/delete/{{ row.id }}">
+        <button>Delete</button>
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+
+

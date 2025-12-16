@@ -1,0 +1,130 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #F5F7FA;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-box {
+      width: 100%;
+      max-width: 800px;
+      height: 90vh;
+      background: #ffffff;
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, #A7C7E7, #D8B7DD);
+      padding: 20px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: #2f4f4f;
+    }
+
+    .history-btn {
+      background: #4CA1A3;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 25px;
+      overflow-y: auto;
+      background: #F5F7FA;
+       display: flex;
+  flex-direction: column;
+
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+     
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 14px 18px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .bot-message {
+      background: #B8E0D2;
+      align-self: flex-start;
+    }
+
+    .user-message {
+      background: #A7C7E7;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 20px;
+      gap: 12px;
+      background: #ffffff;
+      border-top: 1px solid #eee;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      font-size: 15px;
+    }
+
+    .chat-input button {
+      background: #4CA1A3;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 28px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .history-panel {
+      position: fixed;
+      top: 0;
+      right: -350px;
+      width: 300px;
+      height: 100vh;
+      background: #A7C7E7;
+      padding: 20px;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+      transition: right 0.3s ease;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    }
+
+    .history-item {
+      background: #ffffffaa;
+      padding: 12px 15px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
